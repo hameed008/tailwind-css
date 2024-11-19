@@ -363,13 +363,13 @@ The order of these directives matters because of CSS layering:
 
 ### 13. Animations
 
-- Use Tailwind's utility classes for animations like animate-bounce, animate-ping, etc.
+- Use Tailwind's utility classes for animations like `animate-bounce`, `animate-ping`, etc.
 
 ```html
 <div class="animate-spin h-10 w-10 border-4 border-blue-500"></div>
 ```
 
-### 13. State-Based Variants
+### 14. State-Based Variants
 
 - Tailwind supports states like `group`, `peer`, and conditional styling.
 
@@ -379,7 +379,7 @@ The order of these directives matters because of CSS layering:
 </div>
 ```
 
-### 14. CSS Grid and Custom Layouts
+### 15. CSS Grid and Custom Layouts
 
 - Tailwind makes creating complex layouts with grids and custom positioning easy.
 
@@ -390,7 +390,7 @@ The order of these directives matters because of CSS layering:
 </div>
 ```
 
-## 15. Plugins
+## 16. Plugins
 
 - Tailwind supports plugins to extend functionality (e.g., forms, typography, aspect-ratio).
 
@@ -401,15 +401,15 @@ module.exports = {
 };
 ```
 
-### 16. Accessibility Utilities
+### 17. Accessibility Best Practices
 
-- Utilities like `sr-only`, `not-sr-only`, and `aria-*` make creating accessible UIs easier.
+- Use `aria-*` attributes and Tailwind utilities like `sr-only` to improve accessibility.
 
 ```html
-<span class="sr-only">Skip to main content</span>
+<button aria-label="Close" class="sr-only focus:not-sr-only">X</button>
 ```
 
-### 17. Gradients and Backgrounds
+### 18. Gradients and Backgrounds
 
 - Use gradient utilities like `bg-gradient-to-r`, `from-blue-500`, `via-green-500`, and `to-purple-500`.
 
@@ -419,7 +419,7 @@ module.exports = {
 </div>
 ```
 
-### 18. Z-Index, Overflow, and Positioning
+### 19. Z-Index, Overflow, and Positioning
 
 - Tailwind provides utilities for `z-index`, `overflow`, and `position`.
 
@@ -427,7 +427,7 @@ module.exports = {
 <div class="absolute top-0 left-0 z-50">Positioned Element</div>
 ```
 
-### 19. Custom Breakpoints
+### 20. Custom Breakpoints
 
 - Define custom breakpoints in `tailwind.config.js`.
 
@@ -445,7 +445,7 @@ module.exports = {
 };
 ```
 
-### 20. Purging Unused CSS
+### 21. Purging Unused CSS
 
 - Tailwind generates a large number of classes by default. To optimize your CSS file size, configure the purge option in `tailwind.config.js`:
 
@@ -457,7 +457,7 @@ module.exports = {
 
 - This ensures only the classes you use in your project are included in the final CSS bundle.
 
-### 21. Using Dynamic Class Names
+### 22. Using Dynamic Class Names
 
 - You can dynamically create class names in frameworks like React using template literals or conditionals.
 
@@ -470,7 +470,7 @@ return (
 );
 ```
 
-### 22. Combining Tailwind with Other CSS Approaches
+### 23. Combining Tailwind with Other CSS Approaches
 
 - You can use Tailwind alongside CSS modules, SCSS, or styled-components for scenarios where utility classes might not suffice.
 
@@ -480,7 +480,7 @@ import styles from "./Button.module.css";
 return <button className={`${styles.customButton} bg-blue-500`}>Button</button>;
 ```
 
-### 23. Multi-Theming Support
+### 24. Multi-Theming Support
 
 - Tailwind allows multiple themes using custom configurations, often combined with CSS variables for light/dark themes or custom palettes.
 
@@ -503,7 +503,7 @@ module.exports = {
 };
 ```
 
-### Custom Fonts
+### 25. Custom Fonts
 
 - Tailwind can be configured to load custom fonts.
 
@@ -519,7 +519,7 @@ module.exports = {
 };
 ```
 
-### 12. CSS Variables with Tailwind
+### 26. CSS Variables with Tailwind
 
 - Use CSS variables to handle dynamic themes or user preferences.
 
@@ -532,7 +532,7 @@ module.exports = {
 }
 ```
 
-### 24. Tailwind CLI
+### 27. Tailwind CLI
 
 - Use the Tailwind CLI to build your CSS if you’re not using a build tool like Webpack or Vite.
 
@@ -541,7 +541,7 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 ```
 
-### 25. Extending with Plugins
+### 28. Extending with Plugins
 
 - You can write your own plugins to add custom utilities or components.
   Example of a custom plugin:
@@ -562,7 +562,7 @@ module.exports = {
 };
 ```
 
-### 26. Layering with @layer
+### 29. Layering with @layer
 
 - You can add your own styles in `@base`, `@components`, or `@utilities` layers.
 
@@ -574,7 +574,7 @@ module.exports = {
 }
 ```
 
-### 27. Using CDN for Prototyping
+### 30. Using CDN for Prototyping
 
 - Tailwind provides a CDN link for quick prototyping without installation
 
@@ -584,7 +584,7 @@ module.exports = {
 
 Note: Use this only for quick testing, not for production.
 
-### 19. Debugging Tools
+### 31. Debugging Tools
 
 - Use Tailwind's debugging classes like debug-screens to see active breakpoints or outline utilities for debugging layouts.
 
@@ -592,7 +592,7 @@ Note: Use this only for quick testing, not for production.
 <div class="debug-screens">Breakpoint Indicator</div>
 ```
 
-### 20. Learn by Building
+### 32. Learn by Building
 
 - The best way to learn Tailwind is by building real-world projects like:
 - Navbars
@@ -600,12 +600,30 @@ Note: Use this only for quick testing, not for production.
 - Modals
 - Hero sections
 
-### 16. Performance Tips
+### 33. Debugging Tools
+
+- Use Tailwind's debugging classes like `debug-screens` to see active breakpoints or `outline` utilities for debugging layouts.
+
+```html
+<div class="debug-screens">Breakpoint Indicator</div>
+```
+
+### 34. Purging Unused CSS
+
+- Tailwind generates a large number of classes by default. To optimize your CSS file size, configure the purge option in `tailwind.config.js`:
+
+```javascript
+module.exports = {
+  content: ["./src/**/*.{html,js}"], // Specify the files to scan for class names
+};
+```
+
+### 35. Performance Tips
 
 - Use JIT mode (default in Tailwind v3) for faster builds and smaller file sizes.
 - Remove unused classes from production builds by properly configuring the `content` array in `tailwind.config.js`.
 
-### 28. Optimizing for Production
+### 36. Optimizing for Production
 
 - Ensure you properly optimize your Tailwind project for production by enabling purging and minification in the build process.
 
@@ -614,26 +632,10 @@ NODE_ENV=production npx tailwindcss -o build.css --minify
 
 ```
 
-### 29. Tailwind's IntelliSense
+### 37. Tailwind's IntelliSense
 
 - Install the Tailwind CSS IntelliSense extension in VSCode for better productivity. It provides:
   - Class autocompletion.
   - Class previews
   - Hover descriptions.
   - Linting for invalid class names.
-
-```javascript
-
-```
-
-```html
-
-```
-
-```jsx
-
-```
-
-```css
-
-```
