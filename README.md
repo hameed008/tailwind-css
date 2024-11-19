@@ -390,7 +390,7 @@ The order of these directives matters because of CSS layering:
 </div>
 ```
 
-## 16. Plugins
+### 16. Plugins
 
 - Tailwind supports plugins to extend functionality (e.g., forms, typography, aspect-ratio).
 
