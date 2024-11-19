@@ -8,11 +8,11 @@ In programming, a **utility function** is a helper function that performs a comm
 
 - Tailwind CSS provides utility classes for styling elements directly in the HTML.
 
-- Example: Instead of writing custom CSS, you use classes like `bg-blue-500`, `text-center`, `p-4` etc.
+- Example: Instead of writing custom CSS, you use classes like **`bg-blue-500`**, **`text-center`**, **`p-4`** etc.
 
 ## 2. Customization with Configuration
 
-- Tailwind allows you to customize colors, fonts, spacing, and more using the `tailwind.config.js` file.
+- Tailwind allows you to customize colors, fonts, spacing, and more using the **`tailwind.config.js`** file.
 
 ```javascript
 module.exports = {
@@ -26,4 +26,4 @@ module.exports = {
 };
 ```
 
-- Use `bg-`customBlue` in your classes.
+- Use **`bg-customBlue`** in your classes.
