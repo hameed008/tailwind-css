@@ -1,0 +1,12 @@
+1: if we use Tailwind CSS with CDN it will not give suggestion for Tailwind classes in vs code, if we use it using CLI then it will give suggestions.
+Hack: if we want suggestion for Tailwind classes in vs code while using 'Play CDN' create 'tailwind.config.js' file using ( npx tailwindcss init ) command 
+
+======== installation of tailwind css ==========
+1: Using Play CDN: ( we only use this method for development purpose and for production pupose, for production we use CLI method )
+
+2: Using CLI:
+Follow This Link: https://tailwindcss.com/docs/installation
+
+Note: 
+1: For development use play cdn
+2: for production use CLI

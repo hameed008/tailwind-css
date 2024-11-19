@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbitrary Variants in Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <h1 class="text-4xl text-green-600 text-center m-20 bg-orange-200 mx-20 p-4">Arbitrary Variants in Tailwind</h1>
+
+  <ul class="[&>li]:text-black [&>li]:text-sm [&>li]:cursor-pointer bg-red-200 m-20 p-5">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+</body>
+
+</html>
+
+<script>
+
+  // Arbitrary Variants in Tailwind CSS:
+
+  // 1: Arbitrary Variants: Tailwind CSS allows the use of arbitrary variants to apply styles to specific elements within a parent. This is useful for targeting nested elements directly.
+
+  // 2: & Operator: The & operator is commonly used in CSS -in -JS solutions(like styled - components or Emotion) and it refers to the parent selector.
+
+  // Syntax Breakdown:
+  // 1: '&' Refers to the parent element(in this case, the ul element).
+  // 2: [&> li]: text-white: Applies the text-white class to all direct li children of the ul.
+  // 3: [&> li]: text-sm: Applies the text-sm class to all direct li children of the ul.
+  // 4: [&> li]: cursor-pointer: Applies the cursor-pointer class to all direct li children of the ul.
+</script>

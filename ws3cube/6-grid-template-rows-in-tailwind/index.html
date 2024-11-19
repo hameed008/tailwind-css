@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Template Column in Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <h1 class="text-green-500 text-4xl mb-10 text-center my-10">
+    Grid Template Column in Tailwind
+  </h1>
+  <div class="max-w-[1320px] py-5 text-white mx-auto grid grid-rows-4 grid-flow gap-5">
+    <div class="bg-[gray] py-5 text-center row-start-2">One</div>
+    <div class="bg-[pink] py-5 text-center row-span-2">Two</div>
+    <div class="bg-[yellow] py-5 text-center  row-start-1 row-end-5">Three</div>
+    <div class="bg-[red] py-5 text-center">Four</div>
+    <div class="bg-[cyan] py-5 text-center">Five</div>
+    <div class="bg-[blue] py-5 text-center">Six</div>
+    <div class="bg-[purple] py-5 text-center">Seven</div>
+    <div class="bg-[violet] py-5 text-center row-span-4 gri">Eight</div>
+  </div>
+</body>
+
+<script>
+  //✅ Reference Link 1: https://tailwindcss.com/docs/grid-template-rows
+  //✅ Reference Link 2: https://tailwindcss.com/docs/grid-row
+</script>
+
+</html>

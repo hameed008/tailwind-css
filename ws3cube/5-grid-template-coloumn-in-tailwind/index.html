@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Template Column in Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <h1 class="text-green-500 text-4xl mb-10 text-center my-10">
+    Grid Template Column in Tailwind
+  </h1>
+  <div class="max-w-[1200px] py-5 text-white mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-5">
+    <div class="bg-[gray] py-5 text-center col-span-full">One</div>
+    <div class="bg-[pink] py-5 text-center col-span-3">Two</div>
+    <div class="bg-[yellow] py-5 text-center col-start-2 col-end-4">Three</div>
+    <div class="bg-[red] py-5 text-center">Four</div>
+    <div class="bg-[cyan] py-5 text-center">Five</div>
+    <div class="bg-[blue] py-5 text-center col-span-2 max-w-[400px]">Six</div>
+    <div class="bg-[purple] py-5 text-center">Seven</div>
+    <div class="bg-[violet] py-5 text-center">Eight</div>
+  </div>
+</body>
+
+<script>
+  //✅ Reference Link 1: https://tailwindcss.com/docs/grid-template-columns
+  //✅ Reference Link 2: https://tailwindcss.com/docs/grid-column
+
+
+  //✅ Edit the tailwind.config object to customize your configuration with your own design tokens.
+  tailwind.config = {
+    theme: {
+
+      //✅ Using custom colors
+      // Now we can not use other Tailwind's color classes, now we can use thses below colors only, however we can use custom colors like this: text-[#FFFF00].
+      // And also we can not control the intensity of the color like ( text-green-500 ), we have to use it like this only (text-putple ).
+      // if we want to use our custom color as well as Tailwind's default color then we have to extend our custom color in 'extend' object of 'theme'.
+
+      // ✅ Giving Custom color Method 3: 
+      // colors: {
+      //   transparent: 'transparent',
+      //   current: 'currentColor',
+      //   'white': '#ffffff',
+      //   'purple': '#3f3cbb',
+      //   'midnight': '#121063',
+      //   'metal': '#565584',
+      //   'tahiti': '#3ab7bf',
+      //   'silver': '#ecebff',
+      //   'bubble-gum': '#ff77e9',
+      //   'bermuda': '#78dcca',
+      // },
+
+
+      extend: {
+
+        colors: {
+          //✅ this custom color will not apply if we use it on any breakpoints like ( sm, md, lg etc ), for that we have to use Tailwind's predefined color clasess.
+          'mycolor': '#da373d',
+          'white': '#ffffff',
+          'purple': '#3f3cbb',
+          'midnight': '#121063',
+          'metal': '#565584',
+          'tahiti': '#3ab7bf',
+          'silver': '#ecebff',
+          'bubble-gum': '#ff77e9',
+          'bermuda': '#78dcca',
+        }
+      }
+    }
+  }
+
+
+
+</script>
+
+</html>

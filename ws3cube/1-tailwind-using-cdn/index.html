@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Using CDN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <h1 class="text-5xl text-mycolor py-10">Tailwind CSS Using CDN</h1>
+</body>
+
+<script>
+  // Reference Link: https://tailwindcss.com/docs/installation/play-cdn
+  //✅ Tailwind provides its own group of color palates but we can add our own color if we want there are many ways to add your own color in talwind.
+
+
+  //✅ Adding my custom color in Tailwind:
+  //✅ Method 1:
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          //✅ here we can not set the intensity of the color while using it, like this ( decoration-orange-500 )
+          mycolor: '#da373d',
+        }
+      }
+    }
+  }
+</script>
+
+</html>

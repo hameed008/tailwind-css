@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=h1, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-slate-900 grid place-content-center h-screen">
+    <h1 class="text-gray-200 text-4xl mt-6 mb-6 shadow-slate-950">Test</h1>
+
+    <div class="">
+      <div
+        class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4"
+      >
+        <div>
+          <img
+            class="h-12"
+            src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-11/28/full/20221128175501.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <div class="text-2xl font-medium text-black">
+            Talwind css
+            <p class="text-slate-500 text-base">Byy Hameed Khan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Handling Hover, Focus, and Other States -->
+    <button
+      class="bg-sky-500 text-center mt-2 text-white text-base p-2 rounded-xl dark:bg-green-400 hover:bg-green-500 hover:text-slate-800 font-medium"
+    >
+      Buy Now
+    </button>
+
+    <!-- ✅Responsive Design in Tailwind -->
+
+    <!-- 👉 By default, Tailwind uses a mobile-first breakpoint system, similar to what you might be used to in other frameworks like Bootstrap.
+
+    👉 What this means is that unprefixed utilities (like uppercase) take effect on all screen sizes, while prefixed utilities (like md:uppercase) only take effect at the specified breakpoint and above. -->
+    <div class="text-white text-center md:text-green-400">
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+
+    <!-- width in tailwind css -->
+    <div class="min-w-96 flex border-2 mt-5">
+      <h1 class="bg-green-300 w-1/2">Hello World</h1>
+      <p class="bg-blue-400 w-1/2">Hello Programmer</p>
+    </div>
+  </body>
+</html>

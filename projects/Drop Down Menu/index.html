@@ -1,0 +1,42 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="h-screen bg-gray-900 flex items-center justify-center">
+  <div>
+    <div x-data="{ show: false, menu: false }">
+      <button class="text-sm text-white bg-blue-800 px-4 py-2 border-0 rounded-md outline-none hover:bg-blue-900"
+        x-on:click="show = ! show">Open Dropdown</button>
+      <div class="relative">
+        <div class="bg-gray-800 rounded-md p-3 min-w-[220px] top-1 w-full absolute z-10" x-show="show" x-cloak
+          @click.away="show = false" x-transition:enter="transition ease-out duration-100"
+          x-transition:enter-start="transform opacity-0 scale-95">
+          <ul
+            class="[&>li]:text-white [&>li]:text-sm [&>li]:cursor-pointer [&>li]:px-2 [&>li]:py-1 [&>li]:rounded-md [&>li]:transition-all hover:[&>li]:bg-gray-600 active:[&>li]:bg-gray-700 active:[&>li]:scale-[0.99]">
+            <li>Profile</li>
+            <li>Dashboard</li>
+            <li>Settings</li>
+            <li class="flex items-center justify-between" x-on:click="menu = ! menu" @click.away="menu = false">
+              Services
+              <i class="arrow"></i>
+            </li>
+            <div
+              class="bg-gray-800 rounded-md max-w-[180px] w-full p-3 absolute -right-[185px] -bottom-4 [&>li]:text-white [&>li]:text-sm [&>li]:cursor-pointer [&>li]:px-2 [&>li]:py-1 [&>li]:rounded-md [&>li]:transition-all hover:[&>li]:bg-gray-600 active:[&>li]:bg-gray-700 active:[&>li]:scale-[0.99]"
+              x-show="menu" x-transition:enter="transition ease-out duration-100"
+              x-transition:enter-start="transform opacity-0 scale-95">
+              <li>List Item #1</li>
+              <li>List Item #2</li>
+              <li>List Item #3</li>
+            </div>
+            <div class="w-full border border-gray-700 my-1"></div>
+            <li>Logout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Container in Tailwind CSS Using CDN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="container bg-gray-800 p-5 my-10 mx-auto rounded-2xl">
+    <h1 class="text-green-400 text-4xl">
+      Container in Tailwind CSS Using CDN
+    </h1>
+  </div>
+</body>
+
+<script>
+  //✅ Reference Link : https://tailwindcss.com/docs/container
+
+  //✅ Edit the tailwind.config object to customize your configuration with your own design tokens.
+  tailwind.config = {
+    theme: {
+
+      //✅ Adding smaller breakpoints:
+      screens: {
+        //✅ Custom screen added ( new )
+        'xs': '475px',
+
+        //✅ The below all the are default screens in Tailwind.
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+
+        // Modified:
+        '2xl': '1320px',
+        // '2xl': '1536px',
+        // => @media (min-width: 1536px) { ... }
+      }
+    },
+
+    // ✅Overriding the defaults Screen:
+
+    // screens: {
+    //   'sm': '576px',
+    //   // => @media (min-width: 576px) { ... }
+
+    //   'md': '960px',
+    //   // => @media (min-width: 960px) { ... }
+
+    //   'lg': '1440px',
+    //   // => @media (min-width: 1440px) { ... }
+    // },
+
+    extend: {
+
+      //✅ Overriding a single screen:
+      // screens: {
+      //   'lg': '992px',
+      //   // => @media (min-width: 992px) { ... }
+      // },
+
+      //✅ Adding larger breakpoints: ( not working )
+      screens: {
+        '3xl': '1600px',
+      },
+      colors: {
+        //✅ this custom color will not apply if we use it on any breakpoints like ( sm, md, lg etc ), for that we have to use Tailwind's predefined color clasess.
+        mycolor: '#da373d',
+      }
+    },
+  }
+
+</script>
+
+</html>

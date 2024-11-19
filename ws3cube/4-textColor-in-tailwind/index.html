@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Text Color in Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="container bg-gray-800 p-10 my-10 mx-auto rounded-2xl">
+    <h1 class="text-white text-4xl mb-10">
+      Text Color in Tailwind
+    </h1>
+
+    <!--✅ Giving Custom color Method 2: -->
+    <p class="text-[pink] text-2xl"> Using Custom Color with Square Brackets [ ] </p>
+    <p class="text-[#FFFF00] text-2xl"> Using Custom Color with Square Brackets [ ] </p>
+    <p class="text-purple text-2xl"> Using Custom Color By placing it directly in theme 'object'</p>
+    <p class="text-bermuda text-2xl"> Using Custom Color By extending it in 'extend' object of 'theme'</p>
+  </div>
+</body>
+
+<script>
+  //✅ Reference Link : https://tailwindcss.com/docs/text-color
+
+  //✅ Edit the tailwind.config object to customize your configuration with your own design tokens.
+  tailwind.config = {
+    theme: {
+
+      //✅ Using custom colors
+      // Now we can not use other Tailwind's color classes, now we can use thses below colors only, however we can use custom colors like this: text-[#FFFF00].
+      // And also we can not control the intensity of the color like ( text-green-500 ), we have to use it like this only (text-putple ).
+      // if we want to use our custom color as well as Tailwind's default color then we have to extend our custom color in 'extend' object of 'theme'.
+
+      // ✅ Giving Custom color Method 3: 
+      // colors: {
+      //   transparent: 'transparent',
+      //   current: 'currentColor',
+      //   'white': '#ffffff',
+      //   'purple': '#3f3cbb',
+      //   'midnight': '#121063',
+      //   'metal': '#565584',
+      //   'tahiti': '#3ab7bf',
+      //   'silver': '#ecebff',
+      //   'bubble-gum': '#ff77e9',
+      //   'bermuda': '#78dcca',
+      // },
+
+
+      extend: {
+
+        colors: {
+          //✅ this custom color will not apply if we use it on any breakpoints like ( sm, md, lg etc ), for that we have to use Tailwind's predefined color clasess.
+          'mycolor': '#da373d',
+          'white': '#ffffff',
+          'purple': '#3f3cbb',
+          'midnight': '#121063',
+          'metal': '#565584',
+          'tahiti': '#3ab7bf',
+          'silver': '#ecebff',
+          'bubble-gum': '#ff77e9',
+          'bermuda': '#78dcca',
+        }
+      }
+    }
+  }
+
+
+
+</script>
+
+</html>

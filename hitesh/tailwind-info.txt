@@ -1,0 +1,61 @@
+✅ We can use Tailwind CSS in many ways:
+1: Tailwind CLI
+2: Using PostCSS
+3: Framework Guides
+4: Play CDN
+
+1: Tailwind CLI:
+👉 The simplest and fastest way to set up and running with Tailwind CSS from scratch is with the Tailwind CLI tool. The CLI is also available as a standalone executable if you want to use it without installing Node.js.
+
+(i) Install Tailwind CSS:
+👉 Install tailwindcss via npm, and create your tailwind.config.js file.
+
+(ii) Configure your template paths:
+👉 Add the paths to all of your template files in your tailwind.config.js file.
+
+(iii) Add the Tailwind directives to your CSS:
+👉 Add the @tailwind directives for each of Tailwind’s layers to your main CSS file.
+
+(iv) Start the Tailwind CLI build process:
+👉 Run the CLI tool to scan your template files for classes and build your CSS.
+
+(v) Start using Tailwind in your HTML:
+👉 Add your compiled CSS file to the <head> and start using Tailwind’s utility classes to style your content.
+
+-----------------------------------------------------------------------------
+2: Play CDN:
+👉 Use the Play CDN to try Tailwind right in the browser without any build step. The Play CDN is designed for development purposes only, and is not the best choice for production.
+
+(i) Add the Play CDN script to your HTML:
+👉 Add the Play CDN script tag to the <head> of your HTML file, and start using Tailwind’s utility classes to style your content.
+
+(ii) Try customizing your config:
+👉 Edit the tailwind.config object to customize your configuration with your own design tokens.
+
+(iii) Try adding some custom CSS:
+👉 Use type="text/tailwindcss" to add custom CSS that supports all of Tailwind's CSS features.
+
+(iv) Try using a first-party plugin
+👉 Enable first-party plugins, like forms and typography, using the plugins query parameter.
+
+---------------------------------------------------------------
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./dist/index.html"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+👉 This will only monitor index.html file in a particular directory.
+
+------------------------------------------------------------------
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./dist/*.html"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+👉 This will monitor all the html file in a particular directory.
